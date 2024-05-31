@@ -1,0 +1,22 @@
+
+
+<table>
+    <thead>
+        <tr>
+            <th>S.N</th>
+            <th>Category Name</th>
+            <th>Action</th>
+        </tr>
+    </thead> 
+    <tbody>
+        {{#each categoryList}}
+        <tr>
+            <th scope="row">{{inc @index}}</th>
+            <td>{{this.category_name}}</td>
+            <td><a href="/admin/category/{{this.id}}" class="btn btn-primary">Edit</a></td>
+            <td><a href="/admin/category/{{this.id}}" class="btn btn-primary">Delete</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+
+</table>

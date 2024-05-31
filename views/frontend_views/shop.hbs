@@ -1,0 +1,49 @@
+<style>
+    body {
+        margin-top: 150px;
+    }
+
+    .cardContainer {
+        margin-left: 20px;
+    }
+    .card{
+        margin: 20px;
+    }
+    h1{
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        margin-bottom: 30px;
+    }
+    .cardContainer .card img{
+        object-fit: contain;
+        width: 100%;
+    }
+</style>
+
+<body>
+
+
+
+    <h1>Shopping Items</h1>
+
+    <div class="cardContainer">
+        {{#each product}}
+        <div class="row">
+            {{#each this}}
+            <div class="card" style="width: 18rem;">
+                <img src="/static/images/{{this.image}}" class="card-img-top" alt="..."
+                    style="width: 14rem; height:9rem">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.product_name}}</h5>
+                    <p class="card-text">Description: {{this.description}}</p>
+                    <p class="card-text">Price: {{this.price}}</p>
+                    <a href="/cart/add/{{this.id}}" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+
+        {{/each}}
+
+
+    </div>

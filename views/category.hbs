@@ -1,0 +1,25 @@
+
+
+<h1>{{#if data}}edit Category {{else}}Insert Category{{/if}}</h1>
+
+{{#if error}} 
+{{#each error}}
+<div>
+    <strong>
+        {{this.category_name.msg}}
+    </strong>
+</div>
+{{/each}}
+
+ {{/if}}
+
+<form action={{#if data}}"/admin/category/{{data.id}}" {{else}} "/admin/category" {{/if}}method="POST">
+
+    <div class="form-group">
+        <label for="category">Category</label>
+        <input type="text" class="form-control form-control-user" id="category" name="category_name" value="{{data.category_name}}" placeholder="Enter Category of product">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+
+</form>  

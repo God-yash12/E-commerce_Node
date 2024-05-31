@@ -1,0 +1,138 @@
+.homeContainer{
+    height: 90%;
+    width: 100%;
+    position: relative;
+    margin-top: 120px;
+}
+
+.topSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 254, 254, 0.889);
+    margin-bottom: -120px;
+}
+
+.topSection .sectionLeft .paragraph1 {
+    text-transform: uppercase;
+    word-spacing: 1px;
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 153px;
+    line-height: 0px;
+}
+
+.topSection .sectionLeft .paragraph2 {
+    font-size: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 145px;
+    letter-spacing: 5px;
+    word-spacing: -12px;
+    margin-top: -25px;
+}
+
+.topSection .imageSection1 {
+    width: 550px;
+    height: 500px;
+    margin-right: 40px;
+}
+
+.topSection .imageSection1 img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.shopBtn button a {
+    text-decoration: none;
+    color: white;
+}
+
+.topSection .btnShop {
+    width: 150px;
+    height: 40px;
+    padding: 6px 9px;
+    background-color: rgba(76, 125, 27, 0.96);
+    margin-left: 150px;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    color: white;
+}
+
+.topSection .btnShop:hover {
+    background-color: rgba(135, 203, 66, 0.948);
+    color: black;
+}
+
+.cardSection {
+    display: flex;
+    justify-content: center;
+    column-gap: 150px;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(227, 197, 197); /* Matching background color */
+}
+
+.cardSection .menSection,
+.cardSection .womenSection,
+.cardSection .accessoriesSection {
+    width: 14rem;
+    height: 18rem;
+    margin-left: 30px;
+    border-radius: 9px;
+}
+.cardSection .menSection a,
+.cardSection .womenSection a,
+.cardSection .accessoriesSection a{
+    text-decoration: none;
+    color: white;
+}
+.cardSection .menSection:hover,
+.cardSection .womenSection:hover,
+.cardSection .accessoriesSection:hover {
+    box-shadow: 5px 6px 4px 4px rgba(66, 55, 55, 0.823);
+}
+
+.cardSection .menSection img,
+.cardSection .womenSection img,
+.cardSection .accessoriesSection img {
+    width: 97%;
+    height: 97%;
+    margin: 2px;
+    border-radius: 5px;
+    
+}
+
+.cardSection p {
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    margin-left: 40px;
+    padding: 10px;
+    margin-top: -17px;
+    background-color: rgba(96, 28, 28, 0.907);
+    color: white;
+    backdrop-filter: blur(14px);
+    z-index: 1;
+    border-radius: 3px;
+}
+
+.cardSection p:hover {
+    background-color: rgb(177, 113, 22);
+    box-shadow: 2px 4px 2px 2px rgba(143, 65, 65, 0.823);
+    margin-left: 35px;
+    color: rgb(0, 0, 0);
+}
+.cardSection .menSection p i,
+.cardSection .womenSection p i,
+.cardSection .accessoriesSection p i{
+    margin-left: 5px;
+}

@@ -1,0 +1,134 @@
+
+
+
+
+<style>
+  form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+h1{
+  margin: 50px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.error {
+  color: red;
+  margin-top: 5px;
+}
+
+</style>
+
+
+
+
+
+
+<h1>{{#if data}}Edit Product {{else}}Add New Product{{/if}}</h1>
+
+<form action={{#if data}}"/admin/product/edit/{{data.id}}" {{else}}"/admin/product"{{/if}} method="POST"
+  enctype="multipart/form-data">
+
+
+  <label for="productName">Product Name</label>
+  <input type="text" name="productName" placeholder="Enter your product name" value="{{data.product_name}}"><br>
+ {{#if error}}
+  {{#each error}}
+  <div>
+    <strong>
+      {{this.product_name.msg}}
+    </strong>
+  </div>
+  {{/each}}
+  {{/if}}
+
+  <label for="description">Description</label>
+  <input name="description" id="description" placeholder="Description" value="{{data.description}}"><br>
+  {{#if error}}
+  {{#each error}}
+  <div>
+    <strong>
+
+      {{this.description.msg}} <br>
+    </strong>
+  </div>
+  {{/each}}
+  {{/if}}
+
+
+  <label for="price">Price</label>
+  <input type="text" name="price" placeholder="Price" value="{{data.price}}"><br>
+  {{#if error}}
+  {{#each error}}
+  <div> 
+    <strong>
+      {{this.price.msg}} <br>
+    </strong>
+  </div>
+  {{/each}}
+  {{/if}}
+  <select name="category_id">
+    <option hidden>Select Category</option>
+    {{#each category}}
+    <option value="{{this.id}}" {{#ifElse ../data.category_id this.id}} selected {{/ifElse}}>{{this.category_name}}
+    </option>
+    {{/each}}
+  </select><br>
+
+  {{#if error}}
+  {{#each error}}
+  <div>
+    <strong>
+      {{this.category_id.msg}} <br>
+    </strong>
+  </div>
+  {{/each}}
+  {{/if}}
+
+  
+  <label for="file">Choose File</label>
+  <input type="file" name="image"><br><br>
+  {{#if error}}
+  {{#each error}}
+  <div>
+    <strong>
+      {{this.image.msg}}
+    </strong>
+  </div>
+  {{/each}}
+  {{/if}}
+
+
+
+  <button type="submit">Submit</button>
+
+
+
+</form>

@@ -1,0 +1,284 @@
+<style>
+    /* CSS for styling */
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin-top: 100px;
+        padding: 0;
+    }
+
+    h1 {
+        text-align: center;
+        top: 100px;
+        height: 70px;
+        width: 100%;
+        padding: 20px;
+        background-color: #333;
+        font-size: 28px;
+        color: #ffffff;
+        animation: stretch 1.3s ease-in-out forwards;
+        margin-bottom: 30px;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        position: relative;
+        /* To position the acceptPayments container */
+    }
+
+    p {
+        font-size: 16px;
+        color: #000000;
+        margin-bottom: 20px;
+    }
+
+    strong {
+        color: rgb(39, 33, 33);
+        font-size: 25px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    ul li {
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    ul li:before {
+        content: "\2192";
+        color: #FFFFFF;
+        /* Arrow color */
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 1.5em;
+        /* Adjust arrow size */
+        width: 1.5em;
+        /* Adjust arrow size */
+        border-radius: 50%;
+        background-color: #FF6600;
+        /* Background color */
+        position: absolute;
+        left: -2.5em;
+        /* Adjust position */
+        top: 0.3em;
+        /* Adjust position */
+    }
+
+
+    .acceptPayments {
+        margin-top: 80px;
+        position: relative;
+        bottom: 20px;
+        right: 20px;
+        width: 100%;
+        height: 120px;
+        border: 2px solid black;
+
+    }
+
+    .acceptPayments p {
+        margin-bottom: 10px;
+    }
+
+    .images img {
+        width: 100px;
+        margin-right: 20px;
+    }
+
+    .acceptPayments h5 {
+        margin-left: 25px;
+    }
+
+
+    /* Styling for the payment table */
+    .payment-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+
+    .payment-table td {
+        padding: 8px 16px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .payment-table tr:last-child td {
+        border-bottom: none;
+    }
+
+    /* Animation for the section */
+    .section {
+        opacity: 0;
+        transform: translateY(-20px);
+        animation: slideIn 0.5s ease forwards;
+    }
+
+    /* Styling for the HR */
+    .animated-hr {
+        height: 5px;
+        background-color: #333;
+        /* Change to desired color */
+        border: none;
+        margin: 20px 0;
+        /* Adjust margin as needed */
+        animation: stretch 1.2s ease-in-out forwards;
+    }
+
+    /* Animation for the HR */
+    @keyframes stretch {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 100%;
+        }
+    }
+
+    @keyframes slideIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
+
+
+
+
+
+
+<div class="container">
+    <h1> Mode of Payments and Policies</h1>
+    <h3>Payment</h3>
+    <div class="payment-info">
+        <div class="section">
+
+            <ul>
+                <li>Government regulation of Nepal requires Advance Payment through Bank Draft or Wire Transfer.</li>
+                <li>Advance Payment through Bank Draft or Wire Transfer is required.</li>
+                <li>Payment based on Pro-forma invoice.</li>
+                <li>Bank Draft/Wire Transfer/Money Transfer service charges borne by the customer.</li>
+                <li>50% advance payment upon order confirmation.</li>
+            </ul>
+        </div> <br>
+        <div class="section">
+            <h4>Accepted Payment Modes</h4>
+            <ul>
+                <li>Money Transfer Agency.</li>
+                <li>Bank Draft or Wire Transfer.</li>
+                <li>From Credit Card (Master/Visa).</li>
+            </ul>
+        </div><br>
+
+        <div class="section">
+            <h4>Credit Card Payment Details</h4>
+            <p>We accept Visa, MasterCard, and American Express.</p>
+            <p>Please add 4% extra of the total payment for bank charges when paying by credit card.</p>
+
+        </div>
+    </div><br>
+
+
+    </span>
+
+    <span>Note: - The Internal Bank Transfer Fee should be paid by the clients themselves at the time of
+        deposit.</span>
+    <p>Western Union: you can transfer the deposit to the Western Union as well, please email us for the detail
+        instruction to transfer the amount through the western union.</p>
+
+    <br>
+    <span>
+        <h5>
+            Credit Card Payment Details
+        </h5>
+        <p>
+        <p> SECURE CREDIT CARD PAYMENT</p>
+        <p>
+            Nepal Handicraft Product Exporter P. Ltd accepts the widest amount of credit cards through our highly secure
+            online payment processor. Our online Credit Card Payment is 100% secure payment processor. We currently
+            accept Visa, MasterCard, and American Express.
+        </p>
+
+        </p>
+    </span>
+    <span>
+        <p>Online Secure Payment <strong>(Custom Online Payment Form)</strong></p>
+        <p><strong>Note:</strong> While making payment by credit card (Master card and Visa card), please make sure to
+            add 4% extra of the total payment for bank charge.</p>
+    </span>
+
+
+    <div class="acceptPayments">
+        <h5>We accept</h5>
+        <div class="images">
+            <img src="/static/images/visa1.jpeg">
+            <img src="/static/images/master.png">
+            <img src="/static/images/esewa.webp">
+        </div>
+    </div>
+
+    <div class="section">
+        <h4>Bank Transfer Payment Details</h4>
+        <table>
+            <tr>
+                <td>Account Number:</td>
+                <td>2394723894</td>
+            </tr>
+            <tr>
+                <td>Account Name:</td>
+                <td>E-carfting Nepal P. Ltd</td>
+            </tr>
+            <tr>
+                <td>Office Address:</td>
+                <td>Ward No. 8, Municipality, Tarakeshwor, Kathmandu, Nepal</td>
+            </tr>
+            <tr>
+                <td>Sales Office:</td>
+                <td>Chi-habal Club, Thamel, Kathmandu</td>
+            </tr>
+            <tr>
+                <td>Swift Code:</td>
+                <td>HIMANPKA</td>
+            </tr>
+            <tr>
+                <td>Bank Name:</td>
+                <td>HIMALAYAN BANK LTD.</td>
+            </tr>
+            <tr>
+                <td>Tel:</td>
+                <td>+977 1 4253677</td>
+            </tr>
+            <tr>
+                <td>Fax:</td>
+                <td>+977 1 4253677</td>
+            </tr>
+            <tr>
+                <td>Bank city:</td>
+                <td>Kathmandu</td>
+            </tr>
+            <tr>
+                <td>Country of bank:</td>
+                <td>Nepal</td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td>Thamel Marg, Kathmandu, Nepal</td>
+            </tr>
+            <tr>
+                <td>Post Box:</td>
+                <td>13626</td>
+            </tr>
+        </table>
+    </div>
+
+    <hr class="animated-hr ">
+</div>

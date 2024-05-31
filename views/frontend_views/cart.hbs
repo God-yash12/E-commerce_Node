@@ -1,0 +1,96 @@
+<style>
+    /* Container styles */
+    .cartContainer {
+        margin-top: 10%;
+        left: 50%;
+        top: 10%;
+    }
+
+    /* Cart item styles */
+    .cartContainer .cart {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    /* Image styles */
+    .cartContainer .cart img {
+        width: 80px;
+        height: 80px;
+        margin-right: 20px;
+    }
+
+    /* Product details styles */
+    .cartContainer .cart .name {
+        flex-grow: 1;
+    }
+
+    /* Button styles */
+    .cartContainer .cart a.btn {
+        font-size: 20px;
+        padding: 5px 10px;
+        margin: 0 10px;
+        border-radius: 50%;
+        text-decoration: none;
+        color: white;
+        background-color: #007bff;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Delete button styles */
+    .cartContainer .cart button {
+        font-size: 16px;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #dc3545;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Total price styles */
+    .cartContainer .cart p:last-child {
+        margin-left: auto;
+        font-weight: bold;
+        margin-right: 100px;
+    }
+
+    /* Hover effect */
+    .cartContainer .cart:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .cartContainer .cart:hover a.btn,
+    .cartContainer .cart:hover button {
+        background-color: #0056b3;
+    }
+    .cart .productName{
+        font-size: 14px;
+        font-weight: bold;
+    }
+</style>
+
+<div class="cartContainer">
+    <h1>Cart List</h1>
+    {{#each cart}}
+    <div class="cart">
+        <img src="/static/images/{{this.image}}" alt="Product Image">
+        <div class="name">
+            <p class="productName">{{this.productName}}</p>
+            <p>{{this.qty}}</p>
+            <p>{{this.price}}</p>
+        </div>
+        <a href="/cart/plus/{{this.id}}" class="btn">&plus;</a>
+        <a href="/cart/decrement/{{this.id}}" class="btn">&minus;</a>
+        <button><a href="/cart/delete/{{this.id}}">Delete</a></button>
+        <p>Total Price: {{this.totalPriceCart}}</p>
+    </div>
+    {{/each}}
+</div>
